@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /App
 
-
+# Install AOT prerequisites: https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/?tabs=net7%2Clinux-ubuntu#prerequisites
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     clang zlib1g-dev
